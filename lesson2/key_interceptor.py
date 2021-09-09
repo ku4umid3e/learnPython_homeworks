@@ -21,10 +21,16 @@ def discounted(price, discount, max_discount=20):
         if max_discount >= 100:
             raise ValueError('Слишком большая максимальная скидка')
         if discount >= max_discount:
-            print(price)
+            return price
         else:
-            print(price - (price * discount / 100))
+            return price - (price * discount / 100)
     except(ValueError, TypeError):
-        print('ОШИБКА!')
+        return 'ОШИБКА!'
 
-discounted("10000", "15", 20.5)
+print(discounted("10000", "15", 20.5))
+print(discounted(100, 2))
+print(discounted(100, "3"))
+print(discounted("100", "4.5"))
+print(discounted("five", 5))
+print(discounted("сто", "десять"))
+print(discounted(100.0, 5, "10"))
