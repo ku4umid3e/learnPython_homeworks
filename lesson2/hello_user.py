@@ -3,8 +3,6 @@ def hellow_user():
         question = input("Как дела?\n")
         if question == "Хорошо":
             break
-        else:
-            continue
 
 #hellow_user()
 
