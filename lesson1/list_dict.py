@@ -26,7 +26,10 @@ weather["temperature"] = 15
 #Выведите на экран весь словарь
 print(weather)
 #Проверьте, есть ли в словаре ключ country
-print(weather.get("country"))
+if 'country' in weather:
+    print("Есть")
+else:
+    print("Нет")
 #Выведите значение по-умолчанию "Россия" для ключа country
 print(weather.get("country", "Россия"))
 #Добавьте в словарь элемент date со значением "27.05.2019"
