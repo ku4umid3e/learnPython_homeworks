@@ -17,7 +17,7 @@ def ask_user(question_answer):
         if ask == 'бай':
             break
         else:
-            if question_answer.get(ask) == None:
+            if question_answer.get(ask) is None:
                 continue
             else:
                 print(question_answer.get(ask))
