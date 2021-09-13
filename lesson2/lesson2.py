@@ -15,7 +15,7 @@ print(sort_by_age(age= int(input('Сколько вам лет?\n'))))
 
 def string_comparison(string1, string2):
     """Функция, которая принимает на вход две строки и сравнивает их."""
-    if type(string1) != str or type(string2) != str:
+    if not isinstance(string1, str) or not isinstance(string2, str):
         return 0
     if string1 == string2:
         return 1      
@@ -30,4 +30,6 @@ print(string_comparison('hi', 'learn'))
 print(string_comparison(1, 'hellow'))
 print(string_comparison('hellow', 'hellow'))
 print(string_comparison('hellow world', 'hellow'))
+print(string_comparison(1, 1))
+print(string_comparison('hellow', 1))
 
